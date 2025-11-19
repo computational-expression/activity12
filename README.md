@@ -1,7 +1,10 @@
 
 # Activity 12: Project UML Diagram
 
+
 For this activity, you will develop a simple UML diagram in markdown to show how your classes will connect for your final project assignment.
+
+In Python, a module is a file that contains related classes and functions. Your UML diagram will help you plan which classes go into which modules (files), and how those modules will import and interact with each other in your project.
 
 ## Instructions
 

@@ -27,7 +27,6 @@ For this activity, you will develop a simple UML diagram in markdown to show how
    |     main.py       |-->|     ClassB        |
    |     main()        |   |  do_task_b()      |
    +-------------------+   |  process_data()   |
-              +-------------------+
 ```
 
 - `main.py` is in the center, with arrows pointing to each class.
@@ -50,7 +49,6 @@ For this activity, you will develop a simple UML diagram in markdown to show how
    |     main.py       |-->|     ClassB        |
    |     main()        |   |  do_task_b()      |
    +-------------------+   |  process_data()   |
-              +-------------------+
 ```
 
 - `main.py` is in the center, with arrows pointing to each class.

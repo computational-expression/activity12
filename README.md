@@ -15,45 +15,41 @@ For this activity, you will develop a simple UML diagram in markdown to show how
 ## Example 1: Two Connected Classes
 
 ```markdown
-+----------------+        uses        +----------------+
-|   Main.py      |------------------>|   ClassA       |
-|----------------|                   |----------------|
-| run_app()      |                   | do_task_a()    |
-+----------------+                   | get_data()     |
-      |                           +----------------+
-      v                                   v
-+----------------+ <--------uses----- +----------------+
-|   ClassB       |-------------------|   ClassA       |
-|----------------|                   |----------------|
-| do_task_b()    |                   | do_task_a()    |
-| process_data() |                   | get_data()     |
-+----------------+                   +----------------+
+           +-------------------+
+           |     ClassA        |
+           |                   |
+           +-------------------+
+                 ^       
+                 |       
+                 |       
+   +-------------------+   +-------------------+
+   |     main.py       |-->|     ClassB        |
+   |     main()        |   |                   |
+   +-------------------+   +-------------------+
 ```
 
-- `Main.py` creates instances of `ClassA` and `ClassB` and calls `run_app()`.
-- `ClassA` has functions like `do_task_a()` and `get_data()`.
-- `ClassB` uses or interacts with `ClassA` (e.g., calls its methods or stores a reference) and has functions like `do_task_b()` and `process_data()`.
+- `main.py` is in the center, with arrows pointing to each class.
+- `main.py` creates instances of `ClassA` and `ClassB` inside the `main()` function.
+- `ClassB` uses or interacts with `ClassA` (e.g., calls its methods or stores a reference).
 
 ## Example 2: Two Unconnected Classes
 
 ```markdown
-+----------------+
-|   Main.py      |
-|----------------|
-| run_app()      |
-+----------------+
-      |      |
-      v      v
-+-------------------+   +-------------------+
-|  ClassA           |   |  ClassB           |
-|-------------------|   |-------------------|
-| do_task_a()       |   | do_task_b()       |
-| get_data()        |   | process_data()    |
-+-------------------+   +-------------------+
+           +-------------------+
+           |     ClassA        |
+           |                   |
+           +-------------------+
+                 ^       
+                 |       
+                 |       
+   +-------------------+   +-------------------+
+   |     main.py       |-->|     ClassB        |
+   |     main()        |   |                   |
+   +-------------------+   +-------------------+
 ```
 
-- `Main.py` creates instances of `ClassA` and `ClassB` and calls `run_app()`.
-- `ClassA` and `ClassB` each have their own functions (e.g., `do_task_a()`, `get_data()`, `do_task_b()`, `process_data()`).
+- `main.py` is in the center, with arrows pointing to each class.
+- `main.py` creates instances of `ClassA` and `ClassB` inside the `main()` function.
 - `ClassA` and `ClassB` do not interact with each other; only `main.py` calls their methods.
 
 ---
